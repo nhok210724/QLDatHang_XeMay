@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86F6DA"
+    tools:context=".Resgister">
+
+    <EditText
+        android:id="@+id/etInputPass3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#EFD6D6"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/confirm"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="24dp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/etInputPass2"
+        app:layout_constraintTop_toBottomOf="@+id/etInputPass2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFA200"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/tvresgiter"
+        android:textSize="30dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etInputUser2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:background="#EFD6D6"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/inputuser"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#F86A00"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/etInputPass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#EFD6D6"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/inputpass"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="24dp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/etInputUser2"
+        app:layout_constraintTop_toBottomOf="@+id/etInputUser2" />
+
+    <Button
+        android:id="@+id/btnComfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/btnconfirm"
+        android:drawableLeft="@drawable/ic_assignment_turned_in_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInputPass3" />
+
+    <Button
+        android:id="@+id/btnExit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:text="@string/exit"
+        android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInputPass3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="685dp"
+        android:background="#FBFBFB"
+        android:gravity="center"
+        android:text="@string/designer"
+        android:textColor="#FF0000"
+
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
