@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_CtyXe">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_CtyXe"
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_home_second">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_CtyXe" />
 
         <argument
             android:name="myArg"
@@ -30,14 +30,19 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_Xe"
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_ChiTiecDonDH"
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

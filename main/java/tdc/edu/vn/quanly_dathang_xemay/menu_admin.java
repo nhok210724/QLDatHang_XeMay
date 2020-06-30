@@ -41,7 +41,7 @@ public class menu_admin extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_CtyXe, R.id.nav_Xe, R.id.nav_ChiTiecDonDH)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -59,7 +59,7 @@ public class menu_admin extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.nav_home:
+            case R.id.nav_CtyXe:
                 break;
 
         }
