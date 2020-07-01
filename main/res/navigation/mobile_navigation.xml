@@ -40,11 +40,6 @@
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.DonDatHang.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_dondathang" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/chiTietModel2"
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.ChiTiet.ChiTietModel"

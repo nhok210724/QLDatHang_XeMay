@@ -1,9 +1,12 @@
 package tdc.edu.vn.quanly_dathang_xemay.ui.CtyXe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -16,6 +19,7 @@ import androidx.lifecycle.ViewModelProviders;
 import java.util.ArrayList;
 
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomGridView;
+import tdc.edu.vn.quanly_dathang_xemay.EditCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.R;
 import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 
@@ -23,6 +27,7 @@ public class HomeFragment extends Fragment {
 
     ArrayList<CtyXe> ctyXes = new ArrayList<>();
     GridView gridView;
+    Button btnEdit;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -31,9 +36,11 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_ctyxe, container, false);
 
         gridView = root.findViewById(R.id.gridItem);
+        btnEdit = root.findViewById(R.id.btnEdit);
         KhoiTao();
         CustomGridView customGridView = new CustomGridView(getActivity(), R.layout.item_custom_gridview, ctyXes);
         gridView.setAdapter(customGridView);
+
 
         return root;
     }
