@@ -9,47 +9,20 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFA200"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="@string/login"
-        android:textSize="30dp"
+        style="@style/tvLogin"
         app:layout_constraintStart_toStartOf="@+id/etInputPass"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etInputUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:background="#EFD6D6"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/inputuser"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:textColor="#F86A00"
-        android:textSize="24dp"
-        android:textStyle="bold"
+        style="@style/etuser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/etInputPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:background="#EFD6D6"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/inputpass"
-        android:inputType="textPersonName"
-        android:padding="5dp"
-        android:textSize="24dp"
-        android:textStyle="bold"
+        style="@style/etpass"
         app:layout_constraintStart_toStartOf="@+id/etInputUser"
         app:layout_constraintTop_toBottomOf="@+id/etInputUser" />
 
@@ -60,8 +33,8 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:text="@string/submit"
         android:drawableLeft="@drawable/ic_open_in_browser_black_24dp"
+        android:text="@string/submit"
         app:layout_constraintEnd_toStartOf="@+id/btnExit"
         app:layout_constraintTop_toBottomOf="@+id/etInputPass" />
 
@@ -69,8 +42,8 @@
         android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exit"
         android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+        android:text="@string/exit"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="@+id/etInputPass" />
 

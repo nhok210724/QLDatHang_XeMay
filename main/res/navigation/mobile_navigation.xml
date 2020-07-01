@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_CtyXe">
+    app:startDestination="@id/nav_DonDatHang">
 
     <fragment
         android:id="@+id/nav_CtyXe"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.home.HomeFragment"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.CtyXe.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_ctyxe">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.home.HomeSecondFragment"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.CtyXe.HomeSecondFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_home_second">
         <action
@@ -31,18 +31,27 @@
 
     <fragment
         android:id="@+id/nav_Xe"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.gallery.GalleryFragment"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.Xe.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_xe" />
 
     <fragment
-        android:id="@+id/nav_ChiTiecDonDH"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_DonDatHang"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.DonDatHang.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_dondathang" />
     <activity
         android:id="@+id/mainActivity"
         android:name="tdc.edu.vn.quanly_dathang_xemay.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/chiTietModel2"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.ChiTiet.ChiTietModel"
+        android:label="ChiTietModel" >
+        <action
+            android:id="@+id/action_chiTietModel2_pop"
+            app:popUpTo="@id/chiTietModel2"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

@@ -17,4 +17,46 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="tvLogin">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#FFA200</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:text">@string/login</item>
+        <item name="android:textSize">30dp</item>
+
+    </style>
+
+    <style name="etuser">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">34dp</item>
+        <item name="android:background">#EFD6D6</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:hint">@string/inputuser</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">#F86A00</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="etpass">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">27dp</item>
+        <item name="android:background">#EFD6D6</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:hint">@string/inputpass</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+
+
+    </style>
 </resources>

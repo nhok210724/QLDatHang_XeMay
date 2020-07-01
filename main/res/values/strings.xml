@@ -14,6 +14,12 @@
     <string name="ctyxe">Công Ty Xe</string>
     <string name="tenxe">Tên Xe</string>
     <string name="dondathang">Đơn Đặt Hàng</string>
+    <string name="maLoai">Mã Loại</string>
+    <string name="tenLoai">Tên Loại</string>
+    <string name="xuatXu">Xuất Xứ</string>
+    <string name="edit">Edit</string>
+    <string name="chitiec">Chi Tiết Đơn Đặt Hàng</string>
+    <string name="logout">LogOut</string>
 
 
 
