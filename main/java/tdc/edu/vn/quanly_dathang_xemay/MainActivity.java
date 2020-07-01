@@ -12,7 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+/*
+style : dangky,chitiet,ctyxe,dondathang,xe,item,logout
+* */
     //New Control
     EditText etuser, etpass;
     Button btnsubmit, btnexit;

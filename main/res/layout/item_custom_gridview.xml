@@ -7,8 +7,7 @@
 
     <ImageView
         android:id="@+id/img_ctyxe"
-        android:layout_width="80dp"
-        android:layout_height="80dp" />
+        style="@style/img_ctyxe"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,27 +18,19 @@
 
         <TextView
             android:id="@+id/maLoai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/maLoai" />
+            style="@style/maloai"/>
 
         <TextView
             android:id="@+id/tenLoai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tenLoai" />
+            style="@style/tenloai"/>
 
         <TextView
             android:id="@+id/xuatXu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/xuatXu" />
+            style="@style/xuatxu"/>
 
         <Button
             android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit"
+            style="@style/btnedit"
 
             />
     </LinearLayout>

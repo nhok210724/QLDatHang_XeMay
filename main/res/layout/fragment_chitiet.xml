@@ -9,8 +9,6 @@
     </LinearLayout>
 <GridView
     android:id="@+id/gridItem"
-    android:layout_width="match_parent"
-    android:numColumns="2"
-    android:layout_height="match_parent">
+    style="@style/griditem">
 </GridView>
 </LinearLayout>

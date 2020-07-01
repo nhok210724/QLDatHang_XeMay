@@ -16,7 +16,7 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    <!-- main -->
     <style name="tvLogin">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
@@ -57,6 +57,183 @@
         <item name="android:textSize">24dp</item>
         <item name="android:textStyle">bold</item>
 
+    </style>
+
+    <style name="btnSubmit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">44dp</item>
+        <item name="android:layout_marginEnd">100dp</item>
+        <item name="android:layout_marginRight">100dp</item>
+        <item name="android:text">@string/submit</item>
 
     </style>
+    <style name="btnexit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/exit</item>
+
+    </style>
+    <style name="tvresgiter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:text">@string/resgiter</item>
+        <item name="android:textColor">#0015FF</item>
+        <item name="android:textSize">20dp</item>
+
+
+    </style>
+    <style name="textview3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:background">#FBFBFB</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:text">@string/designer</item>
+
+    </style>
+    <!-- Resgister. -->
+
+    <style name="etinputpass3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:background">#EFD6D6</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/confirm</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="textview2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#FFA200</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:text">@string/tvresgiter</item>
+        <item name="android:textSize">30dp</item>
+
+    </style>
+    <style name="etinputuser2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">29dp</item>
+        <item name="android:background">#EFD6D6</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/inputuser</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">#F86A00</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="etinputpass2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:background">#EFD6D6</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/inputpass</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="btncomfirm">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">62dp</item>
+        <item name="android:layout_marginLeft">62dp</item>
+        <item name="android:layout_marginTop">54dp</item>>
+        <item name="android:text">@string/btnconfirm</item>
+
+    </style>
+    <style name="btnexit2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">54dp</item>>
+        <item name="android:layout_marginEnd">63dp</item>>
+        <item name="android:layout_marginRight">63dp</item>>
+        <item name="android:text">@string/exit</item>
+
+    </style>
+    <style name="textview4">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:layout_marginTop">685dp</item>>
+        <item name="android:background">#FBFBFB</item>>
+        <item name="android:gravity">center</item>>
+        <item name="android:text">@string/designer</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">30dp</item>
+
+        <!-- Chitiet -->
+    </style>
+    <style name="griditem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:numColumns">2</item>
+
+    </style>
+
+    <!-- item -->
+
+    <style name="img_ctyxe">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+
+    </style>
+    <style name="maloai">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/maLoai</item>
+
+    </style>
+    <style name="tenloai">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/tenLoai</item>
+
+    </style>
+    <style name="xuatxu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/xuatXu</item>
+
+    </style>
+    <style name="btnedit">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/edit</item>
+
+    </style>
+    <!-- header -->
+
+    <style name="imageview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/nav_header_desc</item>
+        <item name="android:paddingTop">@dimen/nav_header_vertical_spacing</item>
+
+    </style>
+    <style name="textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/nav_header_subtitle</item>
+
+    </style>
+
+
 </resources>
