@@ -3,6 +3,7 @@ package tdc.edu.vn.quanly_dathang_xemay;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         setControl();
 
         //Event
@@ -85,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         btnexit = findViewById(R.id.btnExit);
         tvresgiter = findViewById(R.id.tvResgiter);
 
+    }
+
+    public static int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 
 

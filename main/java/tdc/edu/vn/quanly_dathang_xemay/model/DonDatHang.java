@@ -3,7 +3,7 @@ package tdc.edu.vn.quanly_dathang_xemay.model;
 import java.util.Date;
 
 public class DonDatHang {
-    final private String maDDH;
+     private String maDDH;
     private Date ngayLap;
 
     public DonDatHang(String maDDH) {

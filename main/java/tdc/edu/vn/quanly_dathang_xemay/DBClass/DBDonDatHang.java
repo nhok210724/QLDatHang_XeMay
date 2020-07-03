@@ -16,7 +16,8 @@ public class DBDonDatHang {
 
 
     public DBDonDatHang(Context context) {
-        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
         dbHelper.setSql(sql);
+        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
+
     }
 }

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linerLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   >
+
 
     <ImageView
-        android:id="@+id/img_ctyxe"
+        android:id="@+id/logo_ctyxe"
         android:layout_width="80dp"
         android:layout_height="80dp" />
 
+
     <LinearLayout
+        android:id="@+id/liner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/logo_ctyxe"
         android:orientation="vertical"
-
+android:layout_marginLeft="20dp"
         >
 
         <TextView
@@ -35,13 +39,14 @@
             android:layout_height="wrap_content"
             android:text="@string/xuatXu" />
 
-        <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/edit"
 
-            />
     </LinearLayout>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+     android:layout_toRightOf="@id/liner"
+        android:layout_marginLeft="150dp"
+        android:text="@string/edit" />
+</RelativeLayout>

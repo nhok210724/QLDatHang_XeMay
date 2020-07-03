@@ -23,7 +23,11 @@
     <string name="sua">Sửa</string>
     <string name="xoa">Xoá</string>
     <string name="trove">Trở Về</string>
-
+    <!--Xe-->
+    <string name="tvmaxe">Mã Xe</string>
+    <string name="tvtenxe">Tên Xe</string>
+    <string name="tvdungtichxe">Dung Tích</string>
+    <string name="tvsoluongxe">Số Lượng</string>
 
 
 
@@ -35,9 +39,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="menu_add">ADD</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Cty Xe</string>
+    <string name="menu_gallery">Xe</string>
+    <string name="menu_slideshow">Đơn Đặt Hàng</string>
 
     <string name="home_second">Home Second</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

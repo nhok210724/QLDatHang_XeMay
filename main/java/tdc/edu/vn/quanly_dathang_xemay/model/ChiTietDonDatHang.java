@@ -1,7 +1,7 @@
 package tdc.edu.vn.quanly_dathang_xemay.model;
 
 public class ChiTietDonDatHang {
-private TenXe tenXe;
+private Xe xe;
 private DonDatHang donDatHang;
     private int soLuongDatHang;
     private double donGia;
@@ -22,8 +22,8 @@ private DonDatHang donDatHang;
         this.donGia = donGia;
     }
 
-    public ChiTietDonDatHang(TenXe tenXe, DonDatHang donDatHang, int soLuongDatHang, double donGia) {
-        this.tenXe = tenXe;
+    public ChiTietDonDatHang(Xe xe, DonDatHang donDatHang, int soLuongDatHang, double donGia) {
+        this.xe = xe;
         this.donDatHang = donDatHang;
         this.soLuongDatHang = soLuongDatHang;
         this.donGia = donGia;

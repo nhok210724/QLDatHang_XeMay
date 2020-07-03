@@ -21,7 +21,8 @@ public class DBTenXe {
 
 
     public DBTenXe(Context context) {
-        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
         dbHelper.setSql(sql);
+        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
+
     }
 }

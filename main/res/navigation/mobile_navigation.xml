@@ -17,15 +17,18 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.CtyXe.HomeSecondFragment"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.CtyXe.HomeFragment"
         android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
+        tools:layout="@layout/fragment_ctyxe">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
             app:destination="@id/nav_CtyXe" />
 
         <argument
             android:name="myArg"
+            app:argType="string" />
+        <argument
+            android:name="mylogout"
             app:argType="string" />
     </fragment>
 
@@ -41,12 +44,8 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_dondathang" />
     <fragment
-        android:id="@+id/chiTietModel2"
-        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.ChiTiet.ChiTietModel"
-        android:label="ChiTietModel" >
-        <action
-            android:id="@+id/action_chiTietModel2_pop"
-            app:popUpTo="@id/chiTietModel2"
-            app:popUpToInclusive="true" />
-    </fragment>
+        android:id="@+id/logoutfragment"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.LogOut.LogOut"
+        android:label="fragment_log_out"
+        tools:layout="@layout/fragment_log_out" />
 </navigation>
