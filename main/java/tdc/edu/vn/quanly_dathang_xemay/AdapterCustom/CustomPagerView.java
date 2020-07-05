@@ -1,9 +1,11 @@
 package tdc.edu.vn.quanly_dathang_xemay.AdapterCustom;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +14,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.ArrayList;
 
+import tdc.edu.vn.quanly_dathang_xemay.EditCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.MainActivity;
 import tdc.edu.vn.quanly_dathang_xemay.R;
 import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
@@ -40,7 +43,7 @@ public class CustomPagerView extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.item_xe, container, false);
+        final View view = layoutInflater.inflate(R.layout.item_xe, container, false);
 
         ImageView imageXe = view.findViewById(R.id.image_xe);
         TextView tvMaXe = view.findViewById(R.id.tvmaxe);
@@ -56,7 +59,7 @@ public class CustomPagerView extends PagerAdapter {
         tvMaXe.setText(xe.getMaXe());
         tvTenXe.setText(xe.getTenXe());
         tvDungTich.setText(xe.getDungTich() + "cc");
-        tvSoLuong.setText( "Số Lượng: "+xe.getSoLuong() );
+        tvSoLuong.setText("Số Lượng: " + xe.getSoLuong());
         tvMaLoai_ctyxe_xe.setText(xe.getMaLoai());
 
         container.addView(view, 0);

@@ -8,7 +8,8 @@
         android:id="@+id/img_edit_ctyxe"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginLeft="100dp" />
+        android:layout_gravity="center"
+       />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,18 +17,21 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/etmaloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="@string/maLoai" />
 
         <EditText
+            android:id="@+id/ettenloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="@string/tenLoai" />
 
         <EditText
+            android:id="@+id/etxuatxu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -35,9 +39,19 @@
     </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinerDoi_img"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@color/design_default_color_on_secondary"
+            android:popupBackground="@color/design_default_color_on_secondary"
+            android:text="@string/doianh"
+            android:textColor="@color/design_default_color_on_primary" />
 
         <Button
             android:layout_width="wrap_content"
@@ -47,7 +61,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/xuatXu" />
+            android:text="@string/xoa" />
 
         <Button
             android:id="@+id/btnTroVe"

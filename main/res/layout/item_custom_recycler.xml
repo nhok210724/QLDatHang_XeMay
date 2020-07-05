@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linerLayout"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-   >
+    android:orientation="horizontal">
 
 
     <ImageView
         android:id="@+id/logo_ctyxe"
-        android:layout_width="80dp"
-        android:layout_height="80dp" />
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
 
 
     <LinearLayout
         android:id="@+id/liner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/logo_ctyxe"
-        android:orientation="vertical"
-android:layout_marginLeft="20dp"
-        >
+
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/maLoai"
@@ -43,10 +42,10 @@ android:layout_marginLeft="20dp"
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnEdit"
+        android:id="@+id/btnEditctyxe"
         android:layout_width="100dp"
         android:layout_height="60dp"
-     android:layout_toRightOf="@id/liner"
-        android:layout_marginLeft="150dp"
+
+        android:layout_marginLeft="100dp"
         android:text="@string/edit" />
-</RelativeLayout>
+</LinearLayout>

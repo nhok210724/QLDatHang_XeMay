@@ -33,7 +33,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:drawableLeft="@drawable/ic_open_in_browser_black_24dp"
+        android:drawableLeft="@drawable/submit_login"
         android:text="@string/submit"
         app:layout_constraintEnd_toStartOf="@+id/btnExit"
         app:layout_constraintTop_toBottomOf="@+id/etInputPass" />

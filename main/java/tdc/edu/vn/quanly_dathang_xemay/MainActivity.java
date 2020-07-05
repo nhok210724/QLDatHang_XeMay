@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         tvresgiter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Resgister.class);
+                Intent intent = new Intent(getApplicationContext(), Resgiter.class);
                 startActivity(intent);
 
             }

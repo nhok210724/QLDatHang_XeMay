@@ -23,12 +23,12 @@
     <string name="sua">Sửa</string>
     <string name="xoa">Xoá</string>
     <string name="trove">Trở Về</string>
+    <string name="doianh">Đổi Ảnh</string>
     <!--Xe-->
     <string name="tvmaxe">Mã Xe</string>
     <string name="tvtenxe">Tên Xe</string>
     <string name="tvdungtichxe">Dung Tích</string>
     <string name="tvsoluongxe">Số Lượng</string>
-
 
 
     <string name="title_activity_menu_admin">menu_admin</string>
