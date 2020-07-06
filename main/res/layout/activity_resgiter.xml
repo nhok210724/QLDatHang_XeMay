@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#86F6DA"
+    android:orientation="vertical"
+    tools:context=".Resgiter">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA200"
+        android:gravity="center"
+
+        android:text="@string/tvresgiter"
+        android:textSize="30dp"
+
+        />
+
+
+    <EditText
+        android:id="@+id/etInputUser2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:background="#EFD6D6"
+
+        android:gravity="center"
+        android:hint="@string/inputuser"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="#F86A00"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etInputPass2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#EFD6D6"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/inputpass"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="24dp"
+
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etInputPass3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#EFD6D6"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/confirm"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="24dp"
+
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnComfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="60dp"
+
+            android:drawableLeft="@drawable/ic_assignment_turned_in_black_24dp"
+            android:text="@string/btnconfirm" />
+
+        <Button
+            android:id="@+id/btnExit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="70dp"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+            android:text="@string/exit" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:background="#FBFBFB"
+
+            android:gravity="center"
+            android:text="@string/designer"
+            android:textColor="#FF0000"
+            android:textSize="30dp"
+
+            />
+    </FrameLayout>
+
+
+</LinearLayout>
