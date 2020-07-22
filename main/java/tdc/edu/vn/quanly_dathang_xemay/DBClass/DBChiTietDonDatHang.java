@@ -9,7 +9,7 @@ public class DBChiTietDonDatHang {
     DBHelper dbHelper;
     //Cau Truy Van:
 
-    String sql = "Create Table " + DBHelper.TABLE_CHITIETDONHANG
+   public static final String sql = "Create Table " + DBHelper.TABLE_CHITIETDONHANG
             + "( " + DBHelper.COL_MADONDATHANG + " text, "
             + DBHelper.COL_MAXE + " text, "
             + DBHelper.COL_SOLUONGDATHANG + " int, "
@@ -23,8 +23,9 @@ public class DBChiTietDonDatHang {
 
 
     public DBChiTietDonDatHang(Context context) {
-        dbHelper.setSql(sql);
-        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
+
+        dbHelper = new DBHelper(context);
+
 
     }
 }

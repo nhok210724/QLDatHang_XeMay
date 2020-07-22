@@ -7,15 +7,23 @@ public class CtyXe {
     private String maLoai;
     private String tenLoai, xuatXu;
 
+    public CtyXe() {
+    }
+
     public CtyXe(String maLoai) {
         this.maLoai = maLoai;
     }
 
-    public CtyXe(String image, String maLoai, String tenLoai, String xuatXu) {
-        this.image = image;
+    public void setMaLoai(String maLoai) {
+        this.maLoai = maLoai;
+    }
+
+    public CtyXe(String maLoai, String tenLoai, String xuatXu, String image) {
+
         this.maLoai = maLoai;
         this.tenLoai = tenLoai;
         this.xuatXu = xuatXu;
+        this.image = image;
     }
 
     public String getMaLoai() {

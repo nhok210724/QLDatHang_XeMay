@@ -19,7 +19,7 @@
         <RelativeLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
-            android:layout_height="320dp">
+            android:layout_height="380dp">
 
             <ImageView
                 android:id="@+id/image_xe"

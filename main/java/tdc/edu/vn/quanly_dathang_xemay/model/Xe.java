@@ -1,24 +1,39 @@
 package tdc.edu.vn.quanly_dathang_xemay.model;
 
 public class Xe extends CtyXe {
-    String image;
+    private String image;
 
 
-
-    final private String maXe;
+    private String maXe;
     private String tenXe;
     private int dungTich, soLuong;
 
-    public Xe(String maLoai, String image, String maXe, String tenXe, int dungTich, int soLuong) {
+    public Xe() {
+    }
+
+    public void setMaXe(String maXe) {
+        this.maXe = maXe;
+    }
+
+    public Xe(String maXe, String tenXe, int dungTich, int soLuong, String image) {
+
+        this.image = image;
+        this.maXe = maXe;
+        this.tenXe = tenXe;
+        this.dungTich = dungTich;
+        this.soLuong = soLuong;
+
+    }
+
+    public Xe(String maXe, String tenXe, int dungTich, int soLuong, String image, String maLoai) {
         super(maLoai);
         this.image = image;
         this.maXe = maXe;
         this.tenXe = tenXe;
         this.dungTich = dungTich;
         this.soLuong = soLuong;
+
     }
-
-
 
     @Override
     public String getMaLoai() {
@@ -52,6 +67,7 @@ public class Xe extends CtyXe {
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
+
     public String getImage() {
         return image;
     }

@@ -3,9 +3,15 @@ package tdc.edu.vn.quanly_dathang_xemay.dbhelp;
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBChiTietDonDatHang;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBDonDatHang;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
 
 public class DBHelper extends SQLiteOpenHelper {
     //Cau Truy va'n Create Talbe:
@@ -29,6 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
     static final public String COL_MALOAI = "MaLoai";
     static final public String COL_TENLOAI = "TenLoai";
     static final public String COL_XUATXU = "XuatXu";
+    static final public String COL_IMG_CTYXE = "image";
 
 
     //Colum in TenXe:
@@ -36,43 +43,40 @@ public class DBHelper extends SQLiteOpenHelper {
     static final public String COL_TENXE = "TenXe";
     static final public String COL_DUNGTICH = "DungTich";
     static final public String COL_SOLUONGXE = "SoLuongXe";
-
+    static final public String COL_IMG_TENXE = "image";
 
     //Colum in DondatHang
     static final public String COL_MADONDATHANG = "MaDonDatHang";
     static final public String COL_NGAYLAP = "NgayLap";
-
+    static final public String COL_IMG_DDH = "image";
 
     //Colum in DSChiTietDonHang:
     static final public String COL_SOLUONGDATHANG = "SoLuongDatHang";
     static final public String COL_DONGIA = "DONGIA";
 
 
-    //Function:
-    public DBHelper(@Nullable Context context, String DataName) {
-        super(context, DataName, null, DATABASE_VERSION);
+    //Function:.
+    public DBHelper(Context context) {
+        super(context, NAME_DATABASE, null, DATABASE_VERSION);
     }
 
-
-    public String getSql() {
-        return sql;
-    }
-
-    public void setSql(String sql) {
-        this.sql = sql;
-    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
-            db.execSQL(getSql());
-        } catch (SQLException ex) {
+            db.execSQL(DBCtyXe.sql);
+            db.execSQL(DBTenXe.sql);
+            db.execSQL(DBDonDatHang.sql);
+            db.execSQL(DBChiTietDonDatHang.sql);
+        } catch (SQLiteException ex) {
             System.out.println(ex);
         }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CTYXE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_TENXE);
+        onCreate(db);
     }
 }

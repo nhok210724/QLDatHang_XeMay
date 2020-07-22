@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomRecyclerView;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 
 public class EditCtyXe extends AppCompatActivity {
@@ -40,9 +42,9 @@ public class EditCtyXe extends AppCompatActivity {
 
     ImageView img_logoctyxe;
     EditText maLoai, tenLoai, xuatXu;
-    Button btnTroVe;
+    Button btnTroVe, btnSua, btnDel;
     Spinner spnDoiAnh;
-    ArrayList<String> ten_img = new ArrayList<>();
+
     final int IMAGE_PICK_CODE = 1000;
     final int PERMISSION_CODE = 1001;
 
@@ -55,23 +57,55 @@ public class EditCtyXe extends AppCompatActivity {
         setEvent();
     }
 
+    private CtyXe getdata() {
+        CtyXe ctyXe = new CtyXe(maLoai.getText().toString(), tenLoai.getText().toString(),
+                xuatXu.getText().toString(), spnDoiAnh.getSelectedItem().toString());
+        return ctyXe;
+    }
+
     private void setEvent() {
 
 
         Intent intent = getIntent();
-        ten_img = intent.getStringArrayListExtra("key_img");
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this.getApplicationContext(),
-                android.R.layout.simple_spinner_dropdown_item, ten_img);
+                android.R.layout.simple_spinner_dropdown_item, Ctyxe_new.data_img);
         spnDoiAnh.setAdapter(arrayAdapter);
 
+
         img_logoctyxe.setImageResource(MainActivity.getImageId(this.getApplicationContext(), intent.getStringExtra("key")));
+
+
         maLoai.setText(intent.getStringExtra("key1"));
         tenLoai.setText(intent.getStringExtra("key2"));
         xuatXu.setText(intent.getStringExtra("key3"));
 
+        final CtyXe ctyXe1 = getdata();
+
+
         btnTroVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+
+        btnSua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBCtyXe dbCtyXe = new DBCtyXe(getApplicationContext());
+                dbCtyXe.Sua(ctyXe1);
+                onBackPressed();
+            }
+        });
+
+
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBCtyXe dbCtyXe = new DBCtyXe(getApplicationContext());
+                dbCtyXe.Xoa(ctyXe1);
                 onBackPressed();
             }
         });
@@ -138,7 +172,10 @@ public class EditCtyXe extends AppCompatActivity {
         maLoai = findViewById(R.id.etmaloai);
         tenLoai = findViewById(R.id.ettenloai);
         xuatXu = findViewById(R.id.etxuatxu);
+
         btnTroVe = findViewById(R.id.btnTroVe);
+        btnSua = findViewById(R.id.btnSua_ctyxe);
+        btnDel = findViewById(R.id.btndel_ctyxe);
         spnDoiAnh = findViewById(R.id.spinerDoi_img);
     }
 

@@ -15,8 +15,8 @@ public class DBAdmin {
 
 
     public DBAdmin(Context context) {
-        dbHelper.setSql(sql);
-        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
+
+        dbHelper = new DBHelper(context);
 
     }
 }

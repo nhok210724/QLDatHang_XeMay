@@ -9,15 +9,15 @@ public class DBDonDatHang {
     DBHelper dbHelper;
     //Cau Truy Van:
 
-    String sql = "Create Table " + DBHelper.TABLE_DONDATHANG
+ public static final    String sql = "Create Table " + DBHelper.TABLE_DONDATHANG
             + "(" + DBHelper.COL_MADONDATHANG + " text PRIMARY KEY,"
             + DBHelper.COL_NGAYLAP + " Date "
             + ")";
 
 
     public DBDonDatHang(Context context) {
-        dbHelper.setSql(sql);
-        dbHelper = new DBHelper(context, DBHelper.NAME_DATABASE);
+
+        dbHelper = new DBHelper(context);
 
     }
 }
