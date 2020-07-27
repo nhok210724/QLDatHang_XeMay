@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/ngonNgu"
+        android:icon="@drawable/chuyen_ngonngu"
+        android:orderInCategory="100"
+        android:title="@string/menu_ngonNgu"
+        app:showAsAction="ifRoom" />
+</menu>

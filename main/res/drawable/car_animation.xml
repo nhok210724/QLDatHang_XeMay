@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/car_01"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_02"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_03"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_04"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_05"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_06"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_07"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_08"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_09"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_10"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_11"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_12"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_13"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_14"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_15"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/car_16"
+        android:duration="300" />
+</animation-list>
