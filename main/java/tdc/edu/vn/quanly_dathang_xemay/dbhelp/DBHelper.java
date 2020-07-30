@@ -1,14 +1,12 @@
 package tdc.edu.vn.quanly_dathang_xemay.dbhelp;
 
 import android.content.Context;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBChiTietDonDatHang;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBController;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBDonDatHang;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
@@ -26,10 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
     static final public String TABLE_TENXE = "TenXe";
     static final public String TABLE_DONDATHANG = "DonDatHang";
     static final public String TABLE_CHITIETDONHANG = "ChiTietDonHang";
-    static final public String TABLE_ADMIN = "admin";
-    //COL in ADmin:
-    static final public String COL_USER = "User";
-    static final public String COL_PASS = "Pass";
+
 
     //Colum in DSCtyXe:
     static final public String COL_MALOAI = "MaLoai";
@@ -68,6 +63,7 @@ public class DBHelper extends SQLiteOpenHelper {
             db.execSQL(DBTenXe.sql);
             db.execSQL(DBDonDatHang.sql);
             db.execSQL(DBChiTietDonDatHang.sql);
+            db.execSQL(DBController.sql);
         } catch (SQLiteException ex) {
             System.out.println(ex);
         }
@@ -77,6 +73,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CTYXE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_TENXE);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_DONDATHANG);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CHITIETDONHANG);
         onCreate(db);
     }
 }

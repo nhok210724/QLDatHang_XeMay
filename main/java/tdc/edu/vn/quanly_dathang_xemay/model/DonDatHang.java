@@ -1,10 +1,16 @@
 package tdc.edu.vn.quanly_dathang_xemay.model;
 
-import java.util.Date;
+public   class DonDatHang {
+    private String maDDH;
+    private String ngayLap;
 
-public class DonDatHang {
-     private String maDDH;
-    private Date ngayLap;
+    public DonDatHang() {
+    }
+
+    public DonDatHang(String maDDH, String ngayLap) {
+        this.maDDH = maDDH;
+        this.ngayLap = ngayLap;
+    }
 
     public DonDatHang(String maDDH) {
         this.maDDH = maDDH;
@@ -14,11 +20,11 @@ public class DonDatHang {
         return maDDH;
     }
 
-    public Date getNgayLap() {
+    public String getNgayLap() {
         return ngayLap;
     }
 
-    public void setNgayLap(Date ngayLap) {
+    public void setNgayLap(String ngayLap) {
         this.ngayLap = ngayLap;
     }
 }

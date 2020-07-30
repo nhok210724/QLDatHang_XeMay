@@ -1,10 +1,22 @@
 package tdc.edu.vn.quanly_dathang_xemay.model;
 
-public class ChiTietDonDatHang {
-private Xe xe;
-private DonDatHang donDatHang;
+public class ChiTietDonDatHang extends DonDatHang {
+
+
+    private String maXe;
     private int soLuongDatHang;
     private double donGia;
+
+    public ChiTietDonDatHang(String maDDH, String maXe, int soLuongDatHang, double donGia) {
+        super(maDDH);
+        this.maXe = maXe;
+        this.soLuongDatHang = soLuongDatHang;
+        this.donGia = donGia;
+    }
+
+    public void setMaXe(String maXe) {
+        this.maXe = maXe;
+    }
 
     public int getSoLuongDatHang() {
         return soLuongDatHang;
@@ -22,10 +34,9 @@ private DonDatHang donDatHang;
         this.donGia = donGia;
     }
 
-    public ChiTietDonDatHang(Xe xe, DonDatHang donDatHang, int soLuongDatHang, double donGia) {
-        this.xe = xe;
-        this.donDatHang = donDatHang;
-        this.soLuongDatHang = soLuongDatHang;
-        this.donGia = donGia;
+    public String getMaXe() {
+        return maXe;
     }
+
+
 }

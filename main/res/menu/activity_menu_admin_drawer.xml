@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_rate_review_black_24dp"
             android:title="@string/dondathang" />
         <item
+            android:id="@+id/nav_ChiTiet"
+            android:icon="@drawable/ic_details_black_24dp"
+            android:title="@string/menu_chitiet" />
+        <item
             android:id="@+id/logoutfragment"
             android:icon="@drawable/ic_input_black_24dp"
             android:title="@string/logout" />

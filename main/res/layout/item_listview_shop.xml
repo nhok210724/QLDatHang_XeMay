@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_match"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/liner_animation"
+        style="@style/match_wrap"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/shop_img_xe"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+
+            style="@style/wrap_match"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_shop_tenxe"
+                style="@style/wrap_wrap"
+                android:text="@string/tvtenxe"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spr_shop_soLuong"
+                style="@style/match_match"
+                android:layout_marginTop="10dp"
+                android:popupBackground="@color/spiner_backgroud" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/wrap_match"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_shop_DonGia"
+                style="@style/match_wrap_center"
+                android:text="@string/donGia"
+                android:textColor="@color/red"
+                android:textSize="20dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    style="@style/wrap_wrap_bottom"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/soluongHienCo" />
+
+                <TextView
+                    android:id="@+id/tv_shop_soluongxe"
+                    style="@style/wrap_wrap_bottom"
+                    android:layout_marginLeft="90dp"
+                    android:text="@string/tvsoluongxe" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/match_match"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/ib_shop_addToCard"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_add_shopping_cart_black_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

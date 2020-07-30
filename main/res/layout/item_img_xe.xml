@@ -2,8 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_xe"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/match_wrap"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
 
@@ -13,8 +12,7 @@
 
     <RelativeLayout
         android:id="@+id/relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/match_wrap"
         android:background="@drawable/bo_goc">
 
         <ImageView

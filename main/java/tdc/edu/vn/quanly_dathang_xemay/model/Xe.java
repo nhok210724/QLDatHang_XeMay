@@ -11,10 +11,6 @@ public class Xe extends CtyXe {
     public Xe() {
     }
 
-    public void setMaXe(String maXe) {
-        this.maXe = maXe;
-    }
-
     public Xe(String maXe, String tenXe, int dungTich, int soLuong, String image) {
 
         this.image = image;
@@ -33,6 +29,10 @@ public class Xe extends CtyXe {
         this.dungTich = dungTich;
         this.soLuong = soLuong;
 
+    }
+
+    public void setMaXe(String maXe) {
+        this.maXe = maXe;
     }
 
     @Override

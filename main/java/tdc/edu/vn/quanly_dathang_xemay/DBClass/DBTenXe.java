@@ -15,9 +15,6 @@ import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
 public class DBTenXe {
     //New Properties
     DBHelper dbHelper;
-    Cursor cursor;
-    //Cau Truy Van:
-
     static public final String sql = "Create Table " + DBHelper.TABLE_TENXE
             + "(" + DBHelper.COL_MAXE + " text PRIMARY KEY,"
             + DBHelper.COL_TENXE + " text,"
@@ -28,6 +25,8 @@ public class DBTenXe {
             + "CONSTRAINT fk_TenXe_MaLoai" +
             "   FOREIGN KEY (" + DBHelper.COL_MALOAI + ")" +
             "   REFERENCES " + DBHelper.TABLE_CTYXE + " (" + DBHelper.COL_MALOAI + ")" + ")";
+    //Cau Truy Van:
+    Cursor cursor;
 
 
     public DBTenXe(Context context) {

@@ -1,24 +1,19 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
@@ -29,7 +24,6 @@ import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
 import tdc.edu.vn.quanly_dathang_xemay.Unknow.Linked_Image;
 import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
-import tdc.edu.vn.quanly_dathang_xemay.ui.Xe.GalleryFragment;
 
 public class Add_Edit_Xe extends AppCompatActivity {
     Handler handler;
@@ -127,7 +121,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
             // Toast.makeText(getApplicationContext(), "Sửa Thành Công", Toast.LENGTH_LONG).show();
         } else {
             checkEditText();
-            Custom_toast.makeText(getApplicationContext(), "Xoá Không Thành Công", Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
+            Custom_toast.makeText(getApplicationContext(), getResources().getString(R.string.dialogNotXoa), Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
             //Toast.makeText(getApplicationContext(), "Sửa Không Thành Công", Toast.LENGTH_LONG).show();
         }
     }
@@ -148,7 +142,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
             // Toast.makeText(getApplicationContext(), "Sửa Thành Công", Toast.LENGTH_LONG).show();
         } else {
             checkEditText();
-            Custom_toast.makeText(getApplicationContext(), "Sửa Không Thành Công", Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
+            Custom_toast.makeText(getApplicationContext(), getResources().getString(R.string.dialogNotSua), Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
             //Toast.makeText(getApplicationContext(), "Sửa Không Thành Công", Toast.LENGTH_LONG).show();
         }
 
@@ -171,7 +165,8 @@ public class Add_Edit_Xe extends AppCompatActivity {
             //Toast.makeText(getApplicationContext(), "Thêm Thành Công", Toast.LENGTH_LONG).show();
         } else {
             checkEditText();
-            Custom_toast.makeText(getApplicationContext(), "Thêm Không Thành Công", Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
+            Custom_toast.makeText(getApplicationContext(), getResources().getString(R.string.dialogNotThem),
+                    Custom_toast.LENGTH_LONG, Custom_toast.WARNING).show();
             //Toast.makeText(getApplicationContext(), "Thêm Không Thành Công", Toast.LENGTH_LONG).show();
         }
 

@@ -1,14 +1,12 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
@@ -19,7 +17,7 @@ import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 
 
 public class Ctyxe_new extends AppCompatActivity {
-    public static final String[] data_img = {"mercedes_logo", "bmw_logo", "audi_logo", "honda_logo", "lamborghini_logo", "vinfast_logo"};
+    public static final String[] data_img = {"logo_honda", "logo_kawasaki", "logo_suzuki", "logo_sym", "logo_yamaha"};
     ArrayList<String> name_img_ctyxe = new ArrayList<>();
     ViewPager viewPager;
     EditText maLoai, tenLoai, xuatXu;
@@ -48,11 +46,11 @@ public class Ctyxe_new extends AppCompatActivity {
                     CtyXe ctyXe = getDL();
                     dbCtyXe.Them(ctyXe);
                     Custom_toast.makeText(getApplicationContext(), "Thêm Thành Công", Custom_toast.LENGTH_LONG, Custom_toast.SUCCESS).show();
-                  //  Toast.makeText(getApplicationContext(), "Thêm Thành Công", Toast.LENGTH_LONG).show();
+                    //  Toast.makeText(getApplicationContext(), "Thêm Thành Công", Toast.LENGTH_LONG).show();
                     onBackPressed();
                 } else {
                     Custom_toast.makeText(getApplicationContext(), "Thêm Không Thành Công", Custom_toast.LENGTH_LONG, Custom_toast.ERROR).show();
-                  //  Toast.makeText(getApplicationContext(), "Thêm Không Thành Công", Toast.LENGTH_LONG).show();
+                    //  Toast.makeText(getApplicationContext(), "Thêm Không Thành Công", Toast.LENGTH_LONG).show();
                 }
 
 

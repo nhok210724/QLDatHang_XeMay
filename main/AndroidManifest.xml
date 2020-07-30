@@ -4,16 +4,21 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/icon_app"
+        android:icon="@drawable/icon_xemay"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/icon_app"
+        android:roundIcon="@drawable/icon_xemay"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Waiting_Shop_Detail"></activity>
+        <activity android:name=".DatHangShop" />
+        <activity android:name=".Add_Edit_ddh" />
         <activity android:name=".Animation_Car">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,16 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Add_Edit_Xe"></activity>
-        <activity android:name=".Ctyxe_new"></activity>
-        <activity android:name=".Resgiter" />
+        <activity android:name=".Add_Edit_Xe" />
+        <activity android:name=".Ctyxe_new" />
+        <activity android:name=".Music" />
         <activity
             android:name=".menu_admin"
             android:label="@string/title_activity_menu_admin"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".EditCtyXe" />
     </application>
 

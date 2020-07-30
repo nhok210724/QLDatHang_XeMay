@@ -1,8 +1,5 @@
 package tdc.edu.vn.quanly_dathang_xemay.ui.Xe;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,31 +9,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomPagerView;
-import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.Custom_toast;
 import tdc.edu.vn.quanly_dathang_xemay.Add_Edit_Xe;
-import tdc.edu.vn.quanly_dathang_xemay.Ctyxe_new;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
 import tdc.edu.vn.quanly_dathang_xemay.R;
-import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
 
 public class GalleryFragment extends Fragment {
@@ -130,7 +115,7 @@ public class GalleryFragment extends Fragment {
                 checkEdit = true;
                 Intent intent = new Intent(getContext(), Add_Edit_Xe.class);
                 Xe xe = xes.get(viewPager.getCurrentItem());
-                intent.putExtra("ma", xe.getMaLoai());
+                intent.putExtra("ma", xe.getMaXe());
                 intent.putExtra("ten", xe.getTenXe());
                 intent.putExtra("dungtich", xe.getDungTich() + "");
                 intent.putExtra("soluong", xe.getSoLuong() + "");

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_match"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".Add_Edit_ddh">
+
+    <EditText
+        android:id="@+id/etMaHD"
+        style="@style/match_wrap_center"
+        android:drawableLeft="@drawable/ic_code_black_24dp"
+        android:hint="@string/maHD" />
+
+
+    <LinearLayout
+        style="@style/match_wrap_center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/etNgayLap"
+            style="@style/match_wrap_center"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_border_color_black_24dp"
+            android:enabled="false"
+            android:hint="@string/ngayLap" />
+
+        <Button
+            android:id="@+id/btnDate"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:text="@string/btndate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/animation_linear"
+        style="@style/match_wrap_center">
+
+        <Button
+            android:id="@+id/them_DDH"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_add_box_black_24dp"
+            android:text="@string/them" />
+
+        <Button
+            android:id="@+id/Sua_them_DDH"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_edit_black_24dp"
+            android:text="@string/sua" />
+
+        <Button
+            android:id="@+id/Xoa_them_DDH"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_remove_circle_outline_black_24dp"
+            android:text="@string/xoa" />
+
+        <Button
+            android:id="@+id/TroVe_them_DDH"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+            android:text="@string/trove" />
+    </LinearLayout>
+</LinearLayout>

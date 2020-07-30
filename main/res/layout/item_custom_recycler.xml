@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linerLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/match_wrap"
     android:orientation="horizontal">
 
 
@@ -14,36 +13,30 @@
 
     <LinearLayout
         android:id="@+id/liner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+        style="@style/wrap_wrap"
         android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/maLoai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:text="@string/maLoai" />
 
         <TextView
             android:id="@+id/tenLoai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:text="@string/tenLoai" />
 
         <TextView
             android:id="@+id/xuatXu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:text="@string/xuatXu" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+style="@style/match_match"
         android:gravity="right">
 
         <Button

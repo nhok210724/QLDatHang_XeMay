@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/match_match"
     android:orientation="vertical">
 
     <androidx.viewpager.widget.ViewPager
@@ -9,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_centerInParent="true"
-
         android:background="@drawable/bo_goc"
         android:clipToPadding="false"
         android:foregroundGravity="center"
@@ -19,59 +17,47 @@
     </androidx.viewpager.widget.ViewPager>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/match_wrap"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/etmaloai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/match_wrap_center"
             android:drawableLeft="@drawable/ic_code_black_24dp"
-            android:gravity="center"
             android:hint="@string/maLoai" />
 
         <EditText
             android:id="@+id/ettenloai"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/match_wrap_center"
             android:drawableLeft="@drawable/ic_border_color_black_24dp"
-            android:gravity="center"
             android:hint="@string/tenLoai" />
 
         <EditText
             android:id="@+id/etxuatxu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/match_wrap_center"
             android:drawableLeft="@drawable/ic_explore_black_24dp"
-            android:gravity="center"
             android:hint="@string/xuatXu" />
     </LinearLayout>
 
     <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        style="@style/match_wrap_center">
 
         <Button
             android:id="@+id/btnSua_ctyxe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:drawableLeft="@drawable/ic_edit_black_24dp"
             android:text="@string/sua" />
 
         <Button
             android:id="@+id/btndel_ctyxe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:drawableLeft="@drawable/ic_remove_circle_outline_black_24dp"
             android:text="@string/xoa" />
 
         <Button
             android:id="@+id/btnTroVe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
             android:text="@string/trove" />
     </LinearLayout>

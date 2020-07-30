@@ -1,24 +1,13 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Magnifier;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,15 +15,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 
-import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomRecyclerView;
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.Custom_img_Ctyxe;
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.Custom_toast;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
@@ -43,16 +25,14 @@ import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 public class EditCtyXe extends AppCompatActivity {
 
 
+    final int IMAGE_PICK_CODE = 1000;
+    final int PERMISSION_CODE = 1001;
     ImageView img_logoctyxe;
     EditText maLoai, tenLoai, xuatXu;
     Button btnTroVe, btnSua, btnDel;
     ArrayList<String> name_img_ctyxe = new ArrayList<>();
     Custom_img_Ctyxe Adapter;
     ViewPager viewPager;
-
-    final int IMAGE_PICK_CODE = 1000;
-    final int PERMISSION_CODE = 1001;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

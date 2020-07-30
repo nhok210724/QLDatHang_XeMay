@@ -48,4 +48,9 @@
         android:name="tdc.edu.vn.quanly_dathang_xemay.ui.LogOut.LogOut"
         android:label="fragment_log_out"
         tools:layout="@layout/fragment_log_out" />
+    <fragment
+        android:id="@+id/nav_ChiTiet"
+        android:name="tdc.edu.vn.quanly_dathang_xemay.ui.ChiTiet.ChiTietModel"
+        android:label="@string/menu_chitiet"
+        tools:layout="@layout/fragment_chi_tiet_don_dat_hang" />
 </navigation>

@@ -1,87 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/match_match"
     android:background="#86F6DA"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/tvLogin"
-        app:layout_constraintStart_toStartOf="@+id/etInputPass"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
 
-    <EditText
-        android:id="@+id/etInputUser"
-        style="@style/etuser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/icon_xemay" />
 
-    <EditText
-        android:id="@+id/etInputPass"
-        style="@style/etpass"
-        app:layout_constraintStart_toStartOf="@+id/etInputUser"
-        app:layout_constraintTop_toBottomOf="@+id/etInputUser" />
+    <LinearLayout
+        style="@style/match_wrap_center"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:drawableLeft="@drawable/submit_login"
-        android:text="@string/submit"
-        app:layout_constraintEnd_toStartOf="@+id/btnExit"
-        app:layout_constraintTop_toBottomOf="@+id/etInputPass" />
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/submit_login"
+            android:text="@string/submit" />
 
-    <Button
-        android:id="@+id/btnExit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
-        android:text="@string/exit"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnSubmit"
-        app:layout_constraintEnd_toEndOf="@+id/etInputPass" />
+        <Button
+            android:id="@+id/btnExit"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+            android:text="@string/exit" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvResgiter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/resgiter"
-        android:textColor="#0015FF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnExit" />
+    <LinearLayout
+        style="@style/match_wrap_center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnMusic"
+        style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_music_note_black_24dp"
+            android:text="@string/music"
+
+            />
+
+        <Button
+            android:id="@+id/btnDatHang"
+            style="@style/wrap_wrap"
+            android:drawableLeft="@drawable/ic_shopping_basket_black_24dp"
+            android:text="@string/shop" />
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/animation_hello"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
-        android:src="@drawable/xin_chao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvResgiter" />
+        android:src="@drawable/xin_chao" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
+        style="@style/match_wrap"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:background="#FBFBFB"
         android:gravity="center"
+        android:padding="8dp"
         android:text="@string/designer"
         android:textColor="#FF0000"
         android:textSize="30dp"
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

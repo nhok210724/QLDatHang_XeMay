@@ -27,7 +27,6 @@ public class CustomItemXe_Img extends PagerAdapter {
     }
 
 
-
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {

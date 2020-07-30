@@ -1,7 +1,5 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,19 +10,23 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     //New Control
-    EditText etuser, etpass;
-    Button btnsubmit, btnexit;
-    TextView tvresgiter;
+
+    Button btnsubmit, btnexit, btnMusic, btnShop;
+
     Animation animation;
     ImageView img;
     Handler handler = new Handler();
+
+    public static int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     private void autoAnimation() {
         handler.postDelayed(new Runnable() {
@@ -91,30 +92,34 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        tvresgiter.setOnClickListener(new View.OnClickListener() {
+
+        btnMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Resgiter.class);
+                Intent intent = new Intent(getApplicationContext(), Music.class);
                 startActivity(intent);
-
+            }
+        });
+        btnShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DatHangShop.class);
+                startActivity(intent);
             }
         });
     }
 
     //Set Control
     private void setControl() {
-        etuser = findViewById(R.id.etInputUser);
-        etpass = findViewById(R.id.etInputPass);
+
         btnsubmit = findViewById(R.id.btnSubmit);
         btnexit = findViewById(R.id.btnExit);
-        tvresgiter = findViewById(R.id.tvResgiter);
+        btnMusic = findViewById(R.id.btnMusic);
+        btnShop = findViewById(R.id.btnDatHang);
+
 
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slider_show);
         img = findViewById(R.id.animation_hello);
-    }
-
-    public static int getImageId(Context context, String imageName) {
-        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 
 

@@ -1,31 +1,40 @@
 <resources>
     <string name="app_name">QuanLy_DatHang_XeMay</string>
     <string name="designer">"@"COPY RIGHT BY NHAN</string>
-    <string name="login">LOGIN</string>
-    <string name="inputuser">Input User</string>
-    <string name="inputpass">Input Password</string>
-    <string name="submit">SUBMIT</string>
-    <string name="exit">Exit</string>
-    <string name="resgiter">Resgiter</string>
-    <string name="tvresgiter">RESGITER</string>
-    <string name="confirm">Confirm Password</string>
-    <string name="btnconfirm">Confirm</string>
-    <string name="back">back</string>
+    <string name="login">Đăng nhập</string>
+    <string name="inputuser">Nhập ID</string>
+    <string name="inputpass">Nhập PASS</string>
+    <string name="submit">Gửi</string>
+    <string name="exit">Thoát</string>
+
+    <string name="quanLy">Quản Lý</string>
+
+
+    <string name="confirm">Xác nhận pass</string>
+    <string name="btnconfirm">Xác nhận</string>
+    <string name="back">quay lại</string>
     <string name="ctyxe">Công Ty Xe</string>
     <string name="tenxe">Tên Xe</string>
     <string name="dondathang">Đơn Đặt Hàng</string>
     <string name="maLoai">Mã Loại</string>
     <string name="tenLoai">Tên Loại</string>
     <string name="xuatXu">Xuất Xứ</string>
-    <string name="edit">Edit</string>
+    <string name="edit">Biên tập</string>
     <string name="chitiec">Chi Tiết Đơn Đặt Hàng</string>
-    <string name="logout">LogOut</string>
+    <string name="logout">Đăng xuất</string>
     <string name="sua">Sửa</string>
     <string name="xoa">Xoá</string>
     <string name="trove">Trở Về</string>
     <string name="doianh">Đổi Ảnh</string>
     <string name="them">Thêm</string>
     <string name="capnhat">Cập Nhật</string>
+    <string name="music">Nghe Nhạc</string>
+    <string name="shop">Đặt Hàng</string>
+    <string name="soluongHienCo">Số Lượng :</string>
+    <string name="shop_titte">Cửa hàng</string>
+    <string name="tong">Tổng</string>
+
+
     <!--Xe-->
     <string name="tvmaxe">Mã Xe</string>
     <string name="tvtenxe">Tên Xe</string>
@@ -36,23 +45,35 @@
 
     <!--Xe-->
 
+    <!--Chi Tiết Đơn đặt Hàng-->
+    <string name="soLuongDonDatHang">Số Lượng Đơn Đặt Hàng</string>
+    <string name="donGia">Đơn Giá</string>
 
-    <string name="title_activity_menu_admin">menu_admin</string>
+    <!--Chi Tiết Đơn đặt Hàng-->
+
+    <string name="title_activity_menu_admin">danh sách admin</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="menu_ngonNgu">Ngôn Ngữ</string>
+    <string name="maHD">Mã Hoá Đơn</string>
+    <string name="ngayLap">Ngày Lập</string>
+    <string name="date">dd/MM/YYYY</string>
+    <string name="btndate">Ngày</string>
+
 
     <string name="menu_home">Cty Xe</string>
     <string name="menu_gallery">Xe</string>
     <string name="menu_slideshow">Đơn Đặt Hàng</string>
+    <string name="menu_chitiet">Chi Tiết Đơn Đặt Hàng</string>
 
-    <string name="home_second">Home Second</string>
+
+    <string name="home_second">Trang chủ thứ hai</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Xin Chàp</string>
 
 
     <!-- Thông báo Con -->
@@ -64,5 +85,5 @@
     <string name="dialogNotXoa">Xoá Không Thành Công</string>
 
     <string name="erroMa">Mã Không Được Kí Tự Space</string>
-    <string name="erroEditText">Không Được Đê Trống</string>
+    <string name="erroEditText">Không Được Để Trống</string>
 </resources>

@@ -1,12 +1,11 @@
 package tdc.edu.vn.quanly_dathang_xemay.ui.LogOut;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import tdc.edu.vn.quanly_dathang_xemay.R;
 
@@ -17,7 +16,6 @@ import tdc.edu.vn.quanly_dathang_xemay.R;
  * create an instance of this fragment.
  */
 public class LogOut extends Fragment {
-
 
 
     public LogOut() {

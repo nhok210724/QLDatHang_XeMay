@@ -14,16 +14,16 @@ public class CtyXe {
         this.maLoai = maLoai;
     }
 
-    public void setMaLoai(String maLoai) {
-        this.maLoai = maLoai;
-    }
-
     public CtyXe(String maLoai, String tenLoai, String xuatXu, String image) {
 
         this.maLoai = maLoai;
         this.tenLoai = tenLoai;
         this.xuatXu = xuatXu;
         this.image = image;
+    }
+
+    public void setMaLoai(String maLoai) {
+        this.maLoai = maLoai;
     }
 
     public String getMaLoai() {

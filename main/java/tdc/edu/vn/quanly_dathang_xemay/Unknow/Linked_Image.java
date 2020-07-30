@@ -1,28 +1,24 @@
 package tdc.edu.vn.quanly_dathang_xemay.Unknow;
 
-import java.util.ArrayList;
-
-import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
-
 public class Linked_Image {
-    String[] tenXe_img_audi = {"audi_a4", "audi_a8", "audi_q5", "audi_q7", "audi_s7", "audi_s8", "audi_sq5"};
-    String[] tenXe_img_bmw = {"bmw_330i_m_sport", "bmw_530i", "bmw_i8", "bmw_m_series", "bmw_series_6", "bmw_x7", "bmw_z4"};
-    String[] tenXe_img_honda = {"honda_accord", "honda_brio", "honda_city", "honda_civic", "honda_cr_v", "honda_hr_r", "honda_jazz"};
-    String[] tenXe_img_merce = {"mercedes_benz_a_class", "mercedes_benz_c_class", "mercedes_benz_e_class", "mercedes_benz_g_class", "mercedes_benz_gla",
-            "mercedes_benz_gle", "mercedes_maybach", "mercedes1", "mercedes2"};
-    String[] tenXe_img_lambor = {"lamborghini_aventador_lp_700_4_roadster", "lamborghini_aventador_s", "lamborghini_aventador_sv_roadster"
-            , "lamborghini_aventador_svj", "lamborghini_huracan_lp610_4", "lamborghini_huracan_performante_spyder", "lamborghini_sian_fkp_37"};
-    String[] tenXe_img_vinfast = {"vinfast_lux", "vinfast_red", "vinfast_sedan", "vinfast_sedangold"};
+    String[] tenXe_img_honda = {"logo_honda_lead", "logo_honda_sh", "logo_honda_vision", "logo_honda_wave", "logo_honda_winner_x"};
+    String[] tenXe_img_kawasaki = {"logo_kawasaki_ninja_h2_sx_se", "logo_kawasaki_ninja_zx10_r", "logo_kawasaki_w175", "logo_kawasaki_z650",
+            "logo_kawasaki_z1000"};
+
+    String[] tenXe_img_suzuki = {"logo_suzuki_address", "logo_suzuki_gsx150", "logo_suzuki_impulse", "logo_suzuki_raider", "logo_suzuki_viva"};
+    String[] tenXe_img_sym = {"logo_sym_angela", "logo_sym_galaxy", "logo_sym_husky"
+            , "logo_sym_passing", "logo_sym_star_sr_170"};
+    String[] tenXe_img_yamaha = {"logo_yamaha_exciter", "logo_yamaha_grande", "logo_yamaha_janus", "logo_yamaha_r3", "logo_yamaha_sirius"};
 
 
     public String[] check_Img(String tenImg) {
 
-        if (tenImg.equals("vinfast_logo")) return tenXe_img_vinfast;
-        if (tenImg.equals("mercedes_logo")) return tenXe_img_merce;
-        if (tenImg.equals("lamborghini_logo")) return tenXe_img_lambor;
-        if (tenImg.equals("honda_logo")) return tenXe_img_honda;
-        if (tenImg.equals("bmw_logo")) return tenXe_img_bmw;
-        if (tenImg.equals("audi_logo")) return tenXe_img_audi;
+        if (tenImg.equals("logo_yamaha")) return tenXe_img_yamaha;
+        if (tenImg.equals("logo_suzuki")) return tenXe_img_suzuki;
+        if (tenImg.equals("logo_sym")) return tenXe_img_sym;
+        if (tenImg.equals("logo_honda")) return tenXe_img_honda;
+        if (tenImg.equals("logo_kawasaki")) return tenXe_img_kawasaki;
+
         return null;
     }
 }

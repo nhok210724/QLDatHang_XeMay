@@ -1,12 +1,12 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Animation_Car extends AppCompatActivity {
     AnimationDrawable Car_animation;

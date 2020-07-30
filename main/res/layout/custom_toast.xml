@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    style="@style/match_wrap">
 
     <LinearLayout
         android:id="@+id/toast_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/wrap_wrap"
         android:layout_marginTop="20dp"
         android:background="@drawable/susccess_shape"
         android:paddingLeft="16dp"
@@ -23,8 +21,7 @@
 
         <TextView
             android:id="@+id/toast_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/wrap_wrap"
             android:layout_marginLeft="10dp"
             android:text="This is Custom Toast."
             android:textColor="#FFFFFF" />

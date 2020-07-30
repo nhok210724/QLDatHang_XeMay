@@ -9,34 +9,27 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.GridView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomRecyclerView;
 import tdc.edu.vn.quanly_dathang_xemay.Ctyxe_new;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
-import tdc.edu.vn.quanly_dathang_xemay.EditCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.R;
 import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 
 public class HomeFragment extends Fragment {
 
     Handler handler;
-    private ArrayList<CtyXe> ctyXes = new ArrayList<>();
-    private RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    private ArrayList<CtyXe> ctyXes = new ArrayList<>();
+    private RecyclerView recyclerView;
     private View root;
 
     @Override
