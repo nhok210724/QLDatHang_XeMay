@@ -4,7 +4,7 @@
     <string name="login">Đăng nhập</string>
     <string name="inputuser">Nhập ID</string>
     <string name="inputpass">Nhập PASS</string>
-    <string name="submit">Gửi</string>
+    <string name="submit">Quản Lý</string>
     <string name="exit">Thoát</string>
 
     <string name="quanLy">Quản Lý</string>
@@ -19,7 +19,7 @@
     <string name="maLoai">Mã Loại</string>
     <string name="tenLoai">Tên Loại</string>
     <string name="xuatXu">Xuất Xứ</string>
-    <string name="edit">Biên tập</string>
+    <string name="edit">Sửa</string>
     <string name="chitiec">Chi Tiết Đơn Đặt Hàng</string>
     <string name="logout">Đăng xuất</string>
     <string name="sua">Sửa</string>
@@ -34,6 +34,9 @@
     <string name="shop_titte">Cửa hàng</string>
     <string name="tong">Tổng</string>
 
+    <!--   MUSIC -->
+    <string name="tv_nameMusic">Tên Bài Hát</string>
+
 
     <!--Xe-->
     <string name="tvmaxe">Mã Xe</string>
@@ -46,7 +49,7 @@
     <!--Xe-->
 
     <!--Chi Tiết Đơn đặt Hàng-->
-    <string name="soLuongDonDatHang">Số Lượng Đơn Đặt Hàng</string>
+    <string name="soLuongDonDatHang">Số Lượng ĐĐH</string>
     <string name="donGia">Đơn Giá</string>
 
     <!--Chi Tiết Đơn đặt Hàng-->

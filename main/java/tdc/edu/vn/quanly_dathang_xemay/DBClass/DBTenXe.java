@@ -65,6 +65,33 @@ public class DBTenXe {
         database.insert(DBHelper.TABLE_TENXE, null, values);
     }
 
+    public ArrayList<String> getMaXe() {
+        ArrayList<String> ma = new ArrayList<>();
+        String sql = "SELECT " + DBHelper.COL_MAXE + " FROM " + DBHelper.TABLE_TENXE;
+        SQLiteDatabase database = dbHelper.getReadableDatabase();
+        try {
+            cursor = database.rawQuery(sql, null);
+        } catch (SQLiteException ex) {
+
+        }
+
+        if (cursor != null) {
+            cursor.moveToFirst();
+
+
+            while (!cursor.isAfterLast()) {
+                ma.add(cursor.getString(0));
+                cursor.moveToNext();
+            }
+
+        } else {
+            Log.d("loi", "LOI~");
+        }
+
+
+        return ma;
+    }
+
     public ArrayList<Xe> getDL() {
         ArrayList<Xe> xes = new ArrayList<>();
         String sql = "SELECT * FROM " + DBHelper.TABLE_TENXE;

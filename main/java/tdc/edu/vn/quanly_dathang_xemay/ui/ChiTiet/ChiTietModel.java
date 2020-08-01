@@ -8,16 +8,25 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
+import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.Custom_listview_ChiTiet;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBChiTietDonDatHang;
 import tdc.edu.vn.quanly_dathang_xemay.R;
 import tdc.edu.vn.quanly_dathang_xemay.Waiting_Shop_Detail;
+import tdc.edu.vn.quanly_dathang_xemay.model.ChiTietDonDatHang;
 
 public class ChiTietModel extends Fragment {
 
+    ListView listView;
+    ArrayList<ChiTietDonDatHang> chiTietDonDatHangs = new ArrayList<>();
 
     @Nullable
     @Override
@@ -29,13 +38,19 @@ public class ChiTietModel extends Fragment {
         return view;
     }
 
-    private void setEvent() {
+    private void ShowData() {
+        chiTietDonDatHangs = new DBChiTietDonDatHang(getContext()).get_ChiTietDonDatHang();
+        Custom_listview_ChiTiet custom_listview_chiTiet = new Custom_listview_ChiTiet(chiTietDonDatHangs, getContext());
+        listView.setAdapter(custom_listview_chiTiet);
+    }
 
+    private void setEvent() {
+        ShowData();
     }
 
 
     private void setControl(View view) {
-
+        listView = view.findViewById(R.id.lv_ChiTiet);
     }
 
     //Click detail để chấp nhận thêm or k chấp nhận
@@ -45,6 +60,10 @@ public class ChiTietModel extends Fragment {
             case R.id.bar_shop_waiting:
                 Intent intent = new Intent(getContext(), Waiting_Shop_Detail.class);
                 startActivity(intent);
+                break;
+            case R.id.bar_load:
+                ShowData();
+                Toast.makeText(getContext(), "Cập Nhật Danh Sách", Toast.LENGTH_LONG).show();
                 break;
         }
 

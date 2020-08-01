@@ -1,6 +1,7 @@
 package tdc.edu.vn.quanly_dathang_xemay;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,15 @@ public class Waiting_Shop_Detail extends AppCompatActivity {
 
     private void setEvent() {
         HienThidata();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                HienThidata();
+                new Handler().postDelayed(this, 3000);
+            }
+        }, 3000);
+
+
     }
 
 

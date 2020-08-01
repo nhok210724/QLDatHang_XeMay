@@ -32,7 +32,7 @@ public class Animation_Car extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 5000);
+        }, 3000);
     }
 
     private void setControl() {

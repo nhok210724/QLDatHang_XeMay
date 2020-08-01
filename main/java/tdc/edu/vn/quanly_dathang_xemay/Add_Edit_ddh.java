@@ -45,9 +45,16 @@ public class Add_Edit_ddh extends AppCompatActivity {
     private void CheckData() {
         Intent intent = getIntent();
         if (intent.getExtras().getBoolean("check")) {
+            btnThem.setEnabled(false);
+            btnXoa.setEnabled(true);
+            btnSua.setEnabled(true);
             donDatHangs = new DBDonDatHang(getApplicationContext()).get_DonDatHang();
             DonDatHang donDatHang = donDatHangs.get(intent.getExtras().getInt("posion"));
             setEditText(donDatHang);
+        } else {
+            btnThem.setEnabled(true);
+            btnXoa.setEnabled(false);
+            btnSua.setEnabled(false);
         }
     }
 

@@ -54,7 +54,7 @@ public class Custom_item_waiting_shop_detail extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_waiting_shop_detail, parent, false);
         ImageView img_xe = convertView.findViewById(R.id.waiting_shop_img_xe);
         TextView tv_ten = convertView.findViewById(R.id.tv_waiting_shop_tenxe);
@@ -84,27 +84,13 @@ public class Custom_item_waiting_shop_detail extends BaseAdapter {
                 DBDonDatHang dbDonDatHang = new DBDonDatHang(context.getApplicationContext());
                 maDDH = dbDonDatHang.get_MaDDH();
 //New AlertDialog Selected MaDDH:
-                setDialogSelectedMaDDH();
+                setDialogSelectedMaDDH(position);
 
-                if (!getMaDHH_inSpr.isEmpty()) {
 
-                    DBChiTietDonDatHang dbChiTietDonDatHang = new DBChiTietDonDatHang(context);
-                    dbChiTietDonDatHang.Them(new ChiTietDonDatHang(getMaDHH_inSpr, temp.get(1),
-                            Integer.parseInt(temp.get(3)), Integer.parseInt(temp.get(4))));
-
-                    DBController dbController = new DBController(context);
-                    dbController.Xoa(temp.get(1));
-
-                    Custom_toast.makeText(context.getApplicationContext(), "Thêm Thành Công!!",
-                            Custom_toast.LENGTH_LONG, Custom_toast.WARNING);
-                } else {
-                    Custom_toast.makeText(context.getApplicationContext(), "Bạn Chưa Chọn Mã Đơn Đặt Hàng",
-                            Custom_toast.LENGTH_LONG, Custom_toast.WARNING);
-                }
             }
 
 
-            private void setDialogSelectedMaDDH() {
+            private void setDialogSelectedMaDDH(final int position) {
                 ArrayAdapter arrayAdapter = new ArrayAdapter(context.getApplicationContext(), android.R.layout.simple_spinner_item, maDDH);
 
                 final Spinner spinner = new Spinner(context.getApplicationContext());
@@ -122,6 +108,17 @@ public class Custom_item_waiting_shop_detail extends BaseAdapter {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 getMaDHH_inSpr = spinner.getSelectedItem().toString();
+                                ArrayList<String> temp = data.get(position);
+
+                                DBChiTietDonDatHang dbChiTietDonDatHang = new DBChiTietDonDatHang(context);
+                                ChiTietDonDatHang chiTietDonDatHang = new ChiTietDonDatHang(getMaDHH_inSpr, temp.get(1),
+                                        Integer.parseInt(temp.get(3)), Integer.parseInt(temp.get(4)));
+                                dbChiTietDonDatHang.Them(chiTietDonDatHang);
+
+                                Custom_toast.makeText(context.getApplicationContext(), "Thêm Thành Công!!",
+                                        Custom_toast.LENGTH_LONG, Custom_toast.WARNING);
+                                DBController dbController = new DBController(context);
+                                dbController.Xoa(temp.get(1));
                             }
                         });
 
@@ -129,6 +126,8 @@ public class Custom_item_waiting_shop_detail extends BaseAdapter {
                         "No",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                Custom_toast.makeText(context.getApplicationContext(), "Bạn Chưa Chọn Mã Đơn Đặt Hàng",
+                                        Custom_toast.LENGTH_LONG, Custom_toast.WARNING);
                                 dialog.cancel();
                             }
                         });

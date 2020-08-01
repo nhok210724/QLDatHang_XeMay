@@ -42,6 +42,7 @@
         android:inputType="number" />
 
     <LinearLayout
+        android:gravity="center"
         style="@style/match_wrap_center">
 
         <TextView
@@ -52,10 +53,10 @@
 
         <Spinner
             android:id="@+id/sprMaLoai_add_edit_xe"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:background="@color/design_default_color_on_secondary"
-            android:popupBackground="@color/design_default_color_on_secondary" />
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+           />
 
 
     </LinearLayout>

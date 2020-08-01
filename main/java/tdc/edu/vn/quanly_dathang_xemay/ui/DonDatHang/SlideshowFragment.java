@@ -26,11 +26,11 @@ public class SlideshowFragment extends Fragment {
 
     ListView listView;
     ArrayList<DonDatHang> donDatHangs = new ArrayList<>();
-
+    View root;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_dondathang, container, false);
+        root = inflater.inflate(R.layout.fragment_dondathang, container, false);
         setHasOptionsMenu(true);
 
 
@@ -44,7 +44,7 @@ public class SlideshowFragment extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                DBDonDatHang dbDonDatHang = new DBDonDatHang(getContext());
+                DBDonDatHang dbDonDatHang = new DBDonDatHang(root.getContext());
                 donDatHangs = dbDonDatHang.get_DonDatHang();
 
                 Custom_ListView_DDH custom_listView_ddh = new Custom_ListView_DDH(donDatHangs, getContext());

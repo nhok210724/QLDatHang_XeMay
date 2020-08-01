@@ -28,7 +28,9 @@
         </activity>
         <activity android:name=".Add_Edit_Xe" />
         <activity android:name=".Ctyxe_new" />
-        <activity android:name=".Music" />
+        <activity android:name=".Music">
+
+        </activity>
         <activity
             android:name=".menu_admin"
             android:label="@string/title_activity_menu_admin"

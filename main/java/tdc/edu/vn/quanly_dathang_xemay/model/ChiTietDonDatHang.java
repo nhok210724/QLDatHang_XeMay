@@ -4,10 +4,10 @@ public class ChiTietDonDatHang extends DonDatHang {
 
 
     private String maXe;
-    private int soLuongDatHang;
-    private double donGia;
+    private int soLuongDatHang, donGia;
 
-    public ChiTietDonDatHang(String maDDH, String maXe, int soLuongDatHang, double donGia) {
+
+    public ChiTietDonDatHang(String maDDH, String maXe, int soLuongDatHang, int donGia) {
         super(maDDH);
         this.maXe = maXe;
         this.soLuongDatHang = soLuongDatHang;
@@ -30,7 +30,7 @@ public class ChiTietDonDatHang extends DonDatHang {
         return donGia;
     }
 
-    public void setDonGia(double donGia) {
+    public void setDonGia(int donGia) {
         this.donGia = donGia;
     }
 

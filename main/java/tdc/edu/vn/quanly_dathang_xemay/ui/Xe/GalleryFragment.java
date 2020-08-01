@@ -114,14 +114,10 @@ public class GalleryFragment extends Fragment {
             public void onClick(View v) {
                 checkEdit = true;
                 Intent intent = new Intent(getContext(), Add_Edit_Xe.class);
-                Xe xe = xes.get(viewPager.getCurrentItem());
-                intent.putExtra("ma", xe.getMaXe());
-                intent.putExtra("ten", xe.getTenXe());
-                intent.putExtra("dungtich", xe.getDungTich() + "");
-                intent.putExtra("soluong", xe.getSoLuong() + "");
-                intent.putExtra("maloai", xe.getMaLoai());
-                intent.putExtra("img", xe.getImage());
+
+
                 intent.putExtra("check", checkEdit);
+                intent.putExtra("vitri", viewPager.getCurrentItem());
                 startActivity(intent);
             }
         });
@@ -132,6 +128,7 @@ public class GalleryFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.bar_them1:
+                checkEdit = false;
                 Intent intent = new Intent(getContext(), Add_Edit_Xe.class);
                 ArrayList<String> tenimg = new ArrayList<>();
                 for (Xe xe : xes) {

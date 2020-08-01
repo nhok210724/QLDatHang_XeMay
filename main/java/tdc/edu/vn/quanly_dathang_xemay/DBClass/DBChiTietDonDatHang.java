@@ -80,7 +80,7 @@ public class DBChiTietDonDatHang {
 
         while (!cursor.isAfterLast()) {
             ChiTietDonDatHang chiTietDonDatHang = new ChiTietDonDatHang(cursor.getString(0),
-                    cursor.getString(1), cursor.getInt(2), cursor.getDouble(3));
+                    cursor.getString(1), cursor.getInt(2), cursor.getInt(3));
             chiTietDonDatHangs.add(chiTietDonDatHang);
             cursor.moveToNext();
         }

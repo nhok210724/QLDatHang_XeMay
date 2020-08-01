@@ -6,4 +6,9 @@
         android:icon="@drawable/ic_assignment_late_black_24dp"
         android:title="@string/them"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/bar_load"
+        android:icon="@drawable/ic_autorenew_black_24dp"
+        android:title="@string/capnhat"
+        app:showAsAction="always" />
 </menu>

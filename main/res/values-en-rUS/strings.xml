@@ -64,4 +64,5 @@
     <string name="erroMa">Code Not The Space Character</string>
     <string name="erroEditText">Do Not Empty</string>
     <string name="tong">Sum</string>
+    <string name="tv_nameMusic">Name Music</string>
 </resources>

@@ -2,12 +2,10 @@ package tdc.edu.vn.quanly_dathang_xemay;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -19,6 +17,7 @@ import java.util.ArrayList;
 
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.CustomItemXe_Img;
 import tdc.edu.vn.quanly_dathang_xemay.AdapterCustom.Custom_toast;
+import tdc.edu.vn.quanly_dathang_xemay.CustomSpiner.Custom_Spiner_Ctyxe;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBCtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
 import tdc.edu.vn.quanly_dathang_xemay.Unknow.Linked_Image;
@@ -26,7 +25,7 @@ import tdc.edu.vn.quanly_dathang_xemay.model.CtyXe;
 import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
 
 public class Add_Edit_Xe extends AppCompatActivity {
-    Handler handler;
+
     ViewPager viewPager;
 
     Spinner sprmaLoai;
@@ -41,7 +40,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
     String[] tenImg_theoMaloai;
     int index = 0;
     boolean checkedit = false;
-    boolean checkMa = false;
+
     int posion_img = -1;
 
     @Override
@@ -85,23 +84,45 @@ public class Add_Edit_Xe extends AppCompatActivity {
 
     //Get data in Intent
     private void checkIntent() {
+
+
         Intent intent = getIntent();
         checkedit = intent.getExtras().getBoolean("check");
         if (checkedit) {
 
+            btnThem.setEnabled(false);
+            btnSua.setEnabled(true);
+            btnXoa.setEnabled(true);
 
-            sprmaLoai.setSelection(maloais.indexOf(intent.getStringExtra("maloai")));
+            DBTenXe dbTenXe = new DBTenXe(getApplicationContext());
+            ArrayList<Xe> xes = dbTenXe.getDL();
+            Xe xe = xes.get(intent.getExtras().getInt("vitri"));
 
-            maXe.setText(intent.getStringExtra("ma"));
-            tenXe.setText(intent.getStringExtra("ten"));
-            dungTich.setText(intent.getStringExtra("dungtich"));
-            soLuong.setText(intent.getStringExtra("soluong"));
-            // viewPager.setCurrentItem(tenImgs.indexOf(intent.getStringExtra("img")));
-            posion_img = tenImgs.indexOf(intent.getStringExtra("img"));
+            tenImgs.clear();
+
+            sprmaLoai.setSelection(maloais.indexOf(xe.getMaLoai()));
+            loadspr_img();
+
+            //sprmaLoai.setSelection(0);
+
+            posion_img = tenImgs.indexOf(xe.getImage());
             viewPager.setCurrentItem(posion_img);
-//            posion_img = tenImgs.indexOf(intent.getStringExtra("img"));
-//            maXe.setText(posion_img + "");
 
+
+            maXe.setText(xe.getMaXe());
+            tenXe.setText(xe.getTenXe());
+            dungTich.setText(xe.getDungTich() + "");
+            soLuong.setText(xe.getSoLuong() + "");
+            // viewPager.setCurrentItem(tenImgs.indexOf(intent.getStringExtra("img")));
+
+
+            //maXe.setText(posion_img + "");
+
+
+        } else {
+            btnThem.setEnabled(true);
+            btnSua.setEnabled(false);
+            btnXoa.setEnabled(false);
         }
     }
 
@@ -113,7 +134,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
             Xe xe = new Xe(maXe.getText().toString(), tenXe.getText().toString()
                     , Integer.parseInt(dungTich.getText().toString())
                     , Integer.parseInt(soLuong.getText().toString())
-                    , ten, sprmaLoai.getSelectedItem().toString());
+                    , ten, ctyXes.get(sprmaLoai.getSelectedItemPosition()).getMaLoai());
             DBTenXe dbTenXe = new DBTenXe(getApplicationContext());
             dbTenXe.Xoa(xe);
 
@@ -134,7 +155,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
             Xe xe = new Xe(maXe.getText().toString(), tenXe.getText().toString()
                     , Integer.parseInt(dungTich.getText().toString())
                     , Integer.parseInt(soLuong.getText().toString())
-                    , ten, sprmaLoai.getSelectedItem().toString());
+                    , ten, ctyXes.get(sprmaLoai.getSelectedItemPosition()).getMaLoai());
             DBTenXe dbTenXe = new DBTenXe(getApplicationContext());
             dbTenXe.Sua(xe);
 
@@ -157,7 +178,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
             Xe xe = new Xe(maXe.getText().toString(), tenXe.getText().toString()
                     , Integer.parseInt(dungTich.getText().toString())
                     , Integer.parseInt(soLuong.getText().toString())
-                    , ten, sprmaLoai.getSelectedItem().toString());
+                    , ten, ctyXes.get(sprmaLoai.getSelectedItemPosition()).getMaLoai());
             DBTenXe dbTenXe = new DBTenXe(getApplicationContext());
             dbTenXe.Them(xe);
 
@@ -172,6 +193,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
 
 
     }
+//Sua data setup spiner
 
 
     //Load Spiner
@@ -181,8 +203,8 @@ public class Add_Edit_Xe extends AppCompatActivity {
         maloais = dbCtyXe.getMaloai();
         ctyXes = dbCtyXe.get_ctyXes();
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, maloais);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Custom_Spiner_Ctyxe arrayAdapter = new Custom_Spiner_Ctyxe(getApplicationContext(), ctyXes);
+
         sprmaLoai.setAdapter(arrayAdapter);
 
 
@@ -191,7 +213,7 @@ public class Add_Edit_Xe extends AppCompatActivity {
     //load Img
     private void loadspr_img() {
         for (CtyXe ctyXe : ctyXes) {
-            if (sprmaLoai.getSelectedItem().toString().equals(ctyXe.getMaLoai())) {
+            if (ctyXe.equals((CtyXe) sprmaLoai.getSelectedItem())) {
                 sprImg(ctyXe.getImage());
                 break;
             }
@@ -217,6 +239,8 @@ public class Add_Edit_Xe extends AppCompatActivity {
     //Set Event
     private void setEvent() {
         sprLoad();
+
+
         loadspr_img();
         //Fix Set vitri viewpager
         checkIntent();
@@ -294,6 +318,8 @@ public class Add_Edit_Xe extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
 

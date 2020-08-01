@@ -15,7 +15,9 @@
                 style="@style/wrap_wrap_TextView_chitiet"
                 android:text="@string/maHD" />
 
-            <Spinner style="@style/match_wrap_spn_chitiet" />
+            <Spinner
+                android:id="@+id/spr_ct_maHD"
+                style="@style/match_wrap_spn_chitiet" />
         </LinearLayout>
 
         <LinearLayout
@@ -26,7 +28,9 @@
                 style="@style/wrap_wrap_TextView_chitiet"
                 android:text="@string/tvmaxe" />
 
-            <Spinner style="@style/match_wrap_spn_chitiet" />
+            <Spinner
+                android:id="@+id/spr_ct_maXe"
+                style="@style/match_wrap_spn_chitiet" />
         </LinearLayout>
 
 
@@ -38,7 +42,8 @@
 
             <TextView
                 android:id="@+id/tvSoLuongDH"
-                style="@style/match_match_TextView_margin_weight" />
+                style="@style/match_match_TextView_margin_weight"
+                android:gravity="center" />
 
         </LinearLayout>
 
@@ -58,10 +63,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="168dp"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:orientation="vertical">
 
         <Button
 
