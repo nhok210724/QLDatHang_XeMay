@@ -29,8 +29,8 @@ import tdc.edu.vn.quanly_dathang_xemay.model.Xe;
 public class Custom_listview_Shop extends BaseAdapter {
     ArrayList<Xe> xes;
     Context context;
-    Integer[] spr_soluong = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    List<Integer> ints = Arrays.asList(1000000, 2000000, 50000000, 5000000, 10000000, 20000000, 80000000);
+    public static Integer[] spr_soluong = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public static List<Integer> ints = Arrays.asList(1000000, 2000000, 50000000, 5000000, 10000000, 20000000, 80000000);
     Random random = new Random();
 
     public Custom_listview_Shop(ArrayList<Xe> xes, Context context) {

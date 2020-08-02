@@ -50,6 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
     static final public String COL_DONGIA = "DONGIA";
 
 
+
     //Function:.
     public DBHelper(Context context) {
         super(context, NAME_DATABASE, null, DATABASE_VERSION);

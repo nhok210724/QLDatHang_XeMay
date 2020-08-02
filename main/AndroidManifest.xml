@@ -15,7 +15,10 @@
         android:largeHeap="true"
         android:roundIcon="@drawable/icon_xemay"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar"
+        >
+<!--        android:theme="@style/AppTheme.NoActionBar"-->
+
         <activity android:name=".Waiting_Shop_Detail"></activity>
         <activity android:name=".DatHangShop" />
         <activity android:name=".Add_Edit_ddh" />

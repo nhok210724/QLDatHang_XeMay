@@ -56,6 +56,7 @@ public class Custom_item_waiting_shop_detail extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_waiting_shop_detail, parent, false);
+
         ImageView img_xe = convertView.findViewById(R.id.waiting_shop_img_xe);
         TextView tv_ten = convertView.findViewById(R.id.tv_waiting_shop_tenxe);
         TextView tv_soluong = convertView.findViewById(R.id.tv_waiting_shop_soluongxe);

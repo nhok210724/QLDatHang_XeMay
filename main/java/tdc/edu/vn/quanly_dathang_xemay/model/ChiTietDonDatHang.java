@@ -26,7 +26,7 @@ public class ChiTietDonDatHang extends DonDatHang {
         this.soLuongDatHang = soLuongDatHang;
     }
 
-    public double getDonGia() {
+    public int getDonGia() {
         return donGia;
     }
 

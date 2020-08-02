@@ -2,8 +2,11 @@ package tdc.edu.vn.quanly_dathang_xemay;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -17,13 +20,17 @@ public class Waiting_Shop_Detail extends AppCompatActivity {
 
     ListView lv;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting__shop__detail);
+
+
         setControl();
         setEvent();
     }
+
 
     private void HienThidata() {
         DBController dbController = new DBController(getApplicationContext());
@@ -50,4 +57,24 @@ public class Waiting_Shop_Detail extends AppCompatActivity {
     private void setControl() {
         lv = findViewById(R.id.lv_waiting_shop);
     }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.bar_back:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.bar_back, menu);
+        return super.onCreateOptionsMenu(menu);
+
+    }
+
+
 }

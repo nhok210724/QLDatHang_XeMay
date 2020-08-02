@@ -6,12 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import tdc.edu.vn.quanly_dathang_xemay.CustomSpiner.Custom_Spiner_Xe;
+import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBChiTietDonDatHang;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBDonDatHang;
 import tdc.edu.vn.quanly_dathang_xemay.DBClass.DBTenXe;
 import tdc.edu.vn.quanly_dathang_xemay.R;
@@ -24,7 +25,10 @@ public class Custom_listview_ChiTiet extends BaseAdapter {
 
     Spinner sprmaDH;
     Spinner sprmaXe;
-    TextView tvSoluong, tvDonGia;
+    Spinner sprSoluong, sprDonGia;
+
+
+    Button btnSua, btnXoa;
 
     public Custom_listview_ChiTiet(ArrayList<ChiTietDonDatHang> chiTietDonDatHangs, Context context) {
         this.chiTietDonDatHangs = chiTietDonDatHangs;
@@ -52,9 +56,12 @@ public class Custom_listview_ChiTiet extends BaseAdapter {
 
         sprmaDH = convertView.findViewById(R.id.spr_ct_maHD);
         sprmaXe = convertView.findViewById(R.id.spr_ct_maXe);
-        tvSoluong = convertView.findViewById(R.id.tvSoLuongDH);
-        tvDonGia = convertView.findViewById(R.id.tvDonGia);
+        sprSoluong = convertView.findViewById(R.id.sprSoLuongDH);
+        sprDonGia = convertView.findViewById(R.id.sprDonGia);
 
+        btnSua = convertView.findViewById(R.id.btn_Sua_ChiTiet);
+        btnXoa = convertView.findViewById(R.id.btn_Xoa_ChiTiet);
+        sprmaDH.setEnabled(false);
         ShowSpiner(convertView, position);
 
 
@@ -67,11 +74,11 @@ public class Custom_listview_ChiTiet extends BaseAdapter {
         ArrayAdapter arrayAdapter = new ArrayAdapter(v.getContext(), android.R.layout.simple_spinner_item, data_maDH);
         sprmaDH.setAdapter(arrayAdapter);
 
-        ArrayList<Xe> xes = new DBTenXe(v.getContext()).getDL();
+        final ArrayList<Xe> xes = new DBTenXe(v.getContext()).getDL();
         Custom_Spiner_Xe custom_spiner_xe = new Custom_Spiner_Xe(v.getContext(), xes);
         sprmaXe.setAdapter(custom_spiner_xe);
 
-        ChiTietDonDatHang chiTietDonDatHang = chiTietDonDatHangs.get(position);
+        final ChiTietDonDatHang chiTietDonDatHang = chiTietDonDatHangs.get(position);
 
         sprmaDH.setSelection(data_maDH.indexOf((String) chiTietDonDatHang.getMaDDH()));
 
@@ -83,7 +90,37 @@ public class Custom_listview_ChiTiet extends BaseAdapter {
             }
         }
 
-        tvSoluong.setText(chiTietDonDatHang.getSoLuongDatHang() + "");
-        tvDonGia.setText(chiTietDonDatHang.getDonGia() + "");
+        ArrayAdapter adapter = new ArrayAdapter(v.getContext(), android.R.layout.simple_spinner_item, Custom_listview_Shop.spr_soluong);
+        sprSoluong.setAdapter(adapter);
+
+        sprSoluong.setSelection(chiTietDonDatHang.getSoLuongDatHang() - 1);
+
+        ArrayAdapter adapter1 = new ArrayAdapter(v.getContext(), android.R.layout.simple_spinner_item, Custom_listview_Shop.ints);
+        sprDonGia.setAdapter(adapter1);
+
+        sprDonGia.setSelection(Custom_listview_Shop.ints.indexOf((Integer) chiTietDonDatHang.getDonGia()));
+
+
+        btnSua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBChiTietDonDatHang dbChiTietDonDatHang = new DBChiTietDonDatHang(context);
+                dbChiTietDonDatHang.Sua(new ChiTietDonDatHang(sprmaDH.getSelectedItem().toString()
+                        , xes.get(sprmaXe.getSelectedItemPosition()).getMaXe(),
+                        (Integer) sprSoluong.getSelectedItem(),
+                        (Integer) sprDonGia.getSelectedItem()));
+                Custom_toast.makeText(context, v.getResources().getString(R.string.dialogSua), Custom_toast.LENGTH_LONG, Custom_toast.SUCCESS).show();
+            }
+        });
+
+        btnXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBChiTietDonDatHang dbChiTietDonDatHang = new DBChiTietDonDatHang(context);
+                dbChiTietDonDatHang.Xoa(chiTietDonDatHang);
+
+                Custom_toast.makeText(context, v.getResources().getString(R.string.dialogXoa), Custom_toast.LENGTH_LONG, Custom_toast.SUCCESS).show();
+            }
+        });
     }
 }

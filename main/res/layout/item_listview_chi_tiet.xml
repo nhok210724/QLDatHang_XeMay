@@ -40,8 +40,8 @@
                 style="@style/wrap_wrap_TextView_chitiet"
                 android:text="@string/soLuongDonDatHang" />
 
-            <TextView
-                android:id="@+id/tvSoLuongDH"
+            <Spinner
+                android:id="@+id/sprSoLuongDH"
                 style="@style/match_match_TextView_margin_weight"
                 android:gravity="center" />
 
@@ -53,8 +53,8 @@
                 style="@style/wrap_wrap_TextView_chitiet"
                 android:text="@string/donGia" />
 
-            <TextView
-                android:id="@+id/tvDonGia"
+            <Spinner
+                android:id="@+id/sprDonGia"
                 style="@style/match_match_TextView_margin_weight" />
         </LinearLayout>
 
@@ -68,12 +68,13 @@
         android:orientation="vertical">
 
         <Button
-
+            android:id="@+id/btn_Sua_ChiTiet"
             style="@style/wrap_wrap"
             android:drawableLeft="@drawable/ic_edit_black_24dp"
             android:text="@string/sua" />
 
         <Button
+            android:id="@+id/btn_Xoa_ChiTiet"
             style="@style/wrap_wrap"
             android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/ic_remove_circle_outline_black_24dp"
