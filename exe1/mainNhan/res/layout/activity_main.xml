@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GiaoDien.MainActivity">
+
+    <TextView
+        style="@style/tieude"
+        android:background="#FFEB3B"
+        android:text="@string/thongtin" />
+
+    <EditText
+        android:id="@+id/txtMa"
+        style="@style/txt"
+        android:hint="@string/ma" />
+
+    <EditText
+        android:id="@+id/txtHoTen"
+        style="@style/txt"
+        android:hint="@string/hoTen" />
+
+    <EditText
+        android:id="@+id/txtDiaChi"
+        style="@style/txt"
+        android:hint="@string/diachi" />
+
+    <TextView
+        style="@style/tieude"
+        android:background="#FFEB3B"
+        android:text="@string/chucnang" />
+
+
+    <LinearLayout style="@style/chucnang">
+
+        <Button
+            android:background="@drawable/them"
+            android:id="@+id/btnThem"
+            style="@style/btn"
+
+            android:text="@string/them" />
+        <Button
+            android:id="@+id/btnXoa"
+            style="@style/btn"
+            android:text="@string/xoa" />
+        <Button
+            android:id="@+id/btnSua"
+            style="@style/btn"
+            android:text="@string/sua" />
+        <Button
+            android:id="@+id/btnXoaTrang"
+            style="@style/btn"
+            android:text="@string/xoatrang" />
+
+
+    </LinearLayout>
+    <LinearLayout style="@style/chucnang">
+        <Button
+            android:background="@drawable/exit"
+            android:id="@+id/btnThoat"
+            style="@style/btnimg"          />
+        <Button
+            android:id="@+id/btnVN"
+            style="@style/btnimg"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/vn"/>
+        <Button
+            android:id="@+id/btnEN"
+            style="@style/btnimg"
+            android:background="@drawable/en"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/tieude"
+        android:background="#FFEB3B"
+        android:text="@string/ds" />
+
+    <ListView
+        android:id="@+id/lvDanhSach"
+        style="@style/lv"></ListView>
+</LinearLayout>

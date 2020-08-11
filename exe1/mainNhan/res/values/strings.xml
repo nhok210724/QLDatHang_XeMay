@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name" translatable="false">Giao diện nâng cao</string>
+    <string name="appname" translatable="false">Quản Lý Nhà Thuốc</string>
+    <string name="thongtin" translatable="false">Nhà Thuốc</string>
+    <string name="hoTen" translatable="false">Nhập tên nhà thuốc</string>
+    <string name="ma" translatable="false">Nhập mã nhà thuốc</string>
+    <string name="diachi" translatable="false">Địa chỉ</string>
+    <string name="chucnang" translatable="false">Chức Năng</string>
+    <string name="them" translatable="false">Thêm</string>
+    <string name="xoa" translatable="false">Xóa</string>
+    <string name="sua" translatable="false">Sửa</string>
+    <string name="xoatrang" translatable="false">Xóa Trắng</string>
+    <string name="thoat" translatable="false">Thoát</string>
+    <string name="ds" translatable="false">Thông tin</string>
+
+</resources>

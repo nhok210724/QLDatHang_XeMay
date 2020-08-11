@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout tools:context="tdc.edu.vn.myapplication.GiaoDien.ChiTietActivity" android:orientation="vertical" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/tieude"
+        android:background="#FFEB3B"
+        android:text="Chi Tiết" />
+
+    <EditText style="@style/txt" android:hint="@string/ma" android:id="@+id/txtMa"/>
+
+    <EditText style="@style/txt" android:hint="@string/hoTen" android:id="@+id/txtHoTen"/>
+
+    <EditText style="@style/txt" android:hint="@string/diachi" android:id="@+id/txtDiaChi"/>
+
+</LinearLayout>
